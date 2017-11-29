@@ -233,14 +233,13 @@ a:hover {
     font-size: 20px;
 
   }
-  .info {
-
-    font-size: 8px;
-  }
   .homepageLink {
     font-size: 8px;
   }
   a:hover {
+    display: none;
+  }
+  .info {
     display: none;
   }
 }
