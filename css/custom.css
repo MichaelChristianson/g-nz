@@ -323,23 +323,123 @@ body {
   }
 }
 
-/*@media (max-width: 1024px) {
-  body {
-    background: #000 !important;
-  }
+@media (max-width: 1024px)  {
   .background {
     display: none;
   }
-  /*.page-intro {
-    padding-bottom: 90%;
-  }*/
-  /*.Footer {
-    top: 30%;
+  body {
+    overflow-x:hidden;
+
+    background: #000 !important;
+  }
+  .error {
+    position: relative;
+
+    overflow: default;
+
+    width: 100%;
+    height: 10px;
+    margin: auto;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 20%;
+
+    animation: noise 2s linear infinite;
+    text-align: center;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    line-height: 60px;
+  }
+  .error:after {
+  display: none;
+  }
+
+  .error::before {
+  display: none;
+  }
+  .info {
+    position: absolute;
+    top: -66%;
+
+    animation: noise-3 1s linear infinite;
+    text-align: center;
+    letter-spacing: .25em;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+
+  }
+  .homepageLink {
+    font-size: 20px;
+  }
+  .Footer {
+    top: 70%;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.15);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .background {
+    display: none;
+  }
+  body {
+    overflow-x:hidden;
+
+    background: #000 !important;
+  }
+  .Footer {
+    font-size: 18px;
+  }
+  .error {
+    position: relative;
+
+    overflow: default;
+
+    width: 100%;
+    height: 10px;
+    margin: auto;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 20%;
+
+    animation: noise 2s linear infinite;
+    text-align: center;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 70px;
+    line-height: 60px;
+  }
+  .error:after {
+  display: none;
+  }
+
+  .error::before {
+  display: none;
+  }
+  .info {
+    position: absolute;
+    top: -66%;
+
+    animation: noise-3 1s linear infinite;
+    text-align: center;
+    letter-spacing: .25em;
+
+    font-family: 'Roboto', sans-serif;
     font-size: 30px;
-  }*/
 
+  }
+  .homepageLink {
+    font-size: 18px;
+  }
+  .Footer {
+    top: 70%;
 
-
+    background: rgba(0, 0, 0, 0.15);
+  }
+}
 
 
 
