@@ -243,9 +243,7 @@ body {
 
   background: #000 !important;
 }
-.Footer {
-  font-size: 10px;
-}
+
 .error {
   position: relative;
 
@@ -293,7 +291,7 @@ display: none;
 }
 .Footer {
   top: 50%;
-
+  position: fixed;
   background: rgba(0, 0, 0, 0.15);
 }
 
@@ -308,6 +306,7 @@ display: none;
   }
   .Footer {
     top: 55%;
+    position: fixed;
   }
 }
 
