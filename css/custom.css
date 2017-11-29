@@ -276,7 +276,7 @@ display: none;
   display: none;
 }
 .info {
-  position: absolute;
+  /*position: absolute;
   top: -66%;
   margin-bottom: 10px;
 
@@ -285,8 +285,8 @@ display: none;
   letter-spacing: .25em;
 
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-
+  font-size: 15px;*/
+  display: none;
 }
 .homepageLink {
   font-size: 10px;
