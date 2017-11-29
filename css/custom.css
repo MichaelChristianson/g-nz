@@ -286,7 +286,9 @@ display: none;
 
 @media (max-width: 320px) {
   .error{
-    padding-bottom: 5px;
+
+    padding-bottom: 20px;
+    text-align: center;
   }
   .images {
     padding-top: 20px;
@@ -294,6 +296,7 @@ display: none;
   .Footer {
     top: 55%;
     position: fixed;
+    font-size: 8px;
   }
 }
 
@@ -305,7 +308,7 @@ body {
   padding-bottom: 2%;
 }
   .error{
-    padding-bottom: 5px;
+    padding-bottom: 20px;
     font-size: 20px;
   }
   .images {
