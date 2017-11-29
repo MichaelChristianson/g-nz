@@ -232,9 +232,6 @@ a:hover {
   .homepageLink {
     font-size: 8px;
   }
-  a:hover {
-    display: none;
-  }
   .info {
     display: none;
   }
