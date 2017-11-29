@@ -223,7 +223,24 @@ a:hover {
 
 /*MEDIA QUERIES*/
 
-/*-ms-overflow-style: -ms-autohiding-scrollbar;*/
+@media (max-width: 375px) {
+  .Footer {
+    padding: inherit;
+    padding-right: 1em;
+    padding-top: 1em;
+  }
+  .error {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+  .info {
+    padding-bottom: 10px;
+    font-size: 8px;
+  }
+  .homepageLink {
+    font-size: 8px;
+  }
+}
 
 @media (max-width: 414px) {
 body {
