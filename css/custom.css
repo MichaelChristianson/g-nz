@@ -235,6 +235,10 @@ a:hover {
   .info {
     display: none;
   }
+  .Footer {
+    top: 55%;
+    position: fixed;
+  }
 }
 
 @media (max-width: 414px) {
