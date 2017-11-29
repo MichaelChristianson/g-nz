@@ -223,23 +223,6 @@ a:hover {
 
 /*MEDIA QUERIES*/
 
-@media (max-width: 375px) {
-
-  .error {
-    font-size: 20px;
-
-  }
-  .homepageLink {
-    font-size: 8px;
-  }
-  .info {
-    display: none;
-  }
-  .Footer {
-    top: 55%;
-    position: fixed;
-  }
-}
 
 @media (max-width: 414px) {
 body {
@@ -323,15 +306,22 @@ body {
 }
   .error{
     padding-bottom: 5px;
+    font-size: 20px;
   }
   .images {
     padding-top: 20px;
   }
   .Footer {
     top: 55%;
+    position: fixed;
+  }
+  .homepageLink {
+    font-size: 8px;
+  }
+  .info {
+    display: none;
   }
 }
-
 
 @media (max-width: 960px) {
   body {
