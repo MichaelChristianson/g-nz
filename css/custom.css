@@ -224,11 +224,7 @@ a:hover {
 /*MEDIA QUERIES*/
 
 @media (max-width: 375px) {
-  .Footer {
-    padding: inherit;
-    padding-right: 1em;
-    padding-top: 1em;
-  }
+
   .error {
     font-size: 20px;
 
