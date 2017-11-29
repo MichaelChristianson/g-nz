@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+@keyframes noise-1 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: -6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: 2px;}
+}
+
+@keyframes noise-2 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: 6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: -2px;}
+}
+
+@keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; transform: scaleY(1);}
+  4.3% {opacity: 1; transform: scaleY(1.7);}
+  43% {opacity: 1; transform: scaleX(1.5);}
+}
+
+@keyframes noise-3 {
+  0%,3%,5%,42%,44%,100% {opacity: 1; transform: scaleY(1);}
+  4.3% {opacity: 1; transform: scaleY(4);}
+  43% {opacity: 1; transform: scaleX(10) rotate(60deg);}
+}
+
+
+body {
+  background: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+a {
+  letter-spacing: .15em;
+  padding: 1em;
+  color: #f6fefd;
+  transition-duration: 1s;
+
+}
+
+a:hover {
+  color: #f6fefd;
+  text-decoration: none;
+  letter-spacing: .5em;
+  /*transition-duration: 1s;*/
+}
+li {
+  list-style: none;
+}
+a {
+  font-size: 24px;
+}
+.sideBar {
+  position: fixed;
+  top: 50%;
+  background-image: url("../img/static-video.gif");
+  background-size: auto;
+  /*background: rgba(0, 0, 0, 0.73); /* Fall-back for browsers that don't support rgba */
+  /*background: rgba(0, 0, 0, 0.5);*/
+}
+.homepageLink {
+  text-align: center;
+  background-image: url("../img/static-video.gif");
+  background-size: auto;
+}
+.error {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 95px;
+  font-style: italic;
+  text-align: center;
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -60px;
+  right: 0;
+  animation: noise 2s linear infinite;
+  overflow: default;
+}
+
+.error:before {
+  content: 'GÜNZ';
+  font-family: 'Roboto', sans-serif;
+  font-size: 100px;
+  font-style: italic;
+  text-align: center;
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  color: red;
+  animation: noise-2 .2s linear infinite;
+}
+
+.error:after {
+  content: 'GÜNZ';
+  font-family: 'Roboto', sans-serif;
+  font-size: 100px;
+  font-style: italic;
+  text-align: center;
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  color: blue;
+  animation: noise-1 .2s linear infinite;
+}
+
+.info {
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 140px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: noise-3 1s linear infinite;
+  letter-spacing: .5em;
+}
+
+@media (max-width: 414px) {
+  iframe,
+  .background {
+    display: none;
+  }
+}
+
+@media (max-width: 414px){
+a {
+  font-size: 9px;
+  top: 45%;
+ }
+}
+@media (max-width: 414px) {
+  .plogo {
+    display: block;
+  }
+}
+
+.hidden-desktop {
+  height: 100px;
+  width: 250px;
+  padding-left: 25%;
+}
+
+
+
+@media (max-width: 414px) {
+  .sideBar {
+    top: 30%;
+    padding: 0;
+  }
+}
+/*@media all and (min-width: 400px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}*/
+
+/*Responsive BreakPoints*/
+
+@media (min-width: 320px) {
+  .sideBar{
+    top: 35%;
+  }
+}
+@media (min-width: 700px) {
+ .hidden-desktop{
+   display: none;
+   }
+   a{
+     font-size: 12px;
+   }
+  iframe {
+     width: 500px;
+   }
+   .sideBar {
+     top: 75%;
+   }
+ }
+
+
+@media (min-width: 700px) {
+ .hidden-desktop{
+   display: none;
+   }
+   a{
+     font-size: 12px;
+   }
+   .sideBar {
+     top: 75%;
+   }
+ }
+
+ /*Extra small devices (portrait phones, less than 576px)*/
+ /*No media query since this is the default in Bootstrap*/
+
+ /*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { ... }
+
+ /*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+ .hidden-desktop{
+   display: none;
+   }
+   a{
+     font-size: 12px;
+   }
+   .sideBar {
+     top: 75%;
+   }
+ }
+
+ /*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { ... }
+
+ /*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { ... }

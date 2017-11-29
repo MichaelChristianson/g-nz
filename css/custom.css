@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+html, body {
+  height: 100%;
+
+  color: white;
+  background: #000;
+}
+body {
+
+}
+
+.error {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -60px;
+
+  overflow: default;
+
+  width: 100px;
+  height: 60px;
+  margin: auto;
+
+  animation: noise 2s linear infinite;
+  text-align: center;
+  text-align: center;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 95px;
+  font-style: italic;
+  line-height: 60px;
+}
+
+.error:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+  height: 60px;
+  margin: auto;
+
+  content: 'GÜNZ';
+  animation: noise-1 .2s linear infinite;
+  text-align: center;
+
+  opacity: 0;
+  color: blue;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 100px;
+  font-style: italic;
+  line-height: 60px;
+}
+
+.info {
+  position: absolute;
+  top: 140px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 200px;
+  height: 60px;
+  margin: auto;
+
+  animation: noise-3 1s linear infinite;
+  text-align: center;
+  /*font-style: italic;*/
+  text-align: center;
+  letter-spacing: .25em;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  line-height: 60px;
+}
+
+.error:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100px;
+  height: 60px;
+  margin: auto;
+
+  content: 'GÜNZ';
+  animation: noise-2 .2s linear infinite;
+  text-align: center;
+
+  opacity: 0;
+  color: red;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 100px;
+  font-style: italic;
+  line-height: 60px;
+}
+
+.Footer {
+  position: fixed;
+  top: 50%;
+
+  padding: 1em;
+
+  background-image: url("../img/static-video.gif");
+  background-size: auto;
+
+  line-height: 1.5em;
+  /*background: rgba(0, 0, 0, 0.73); /* Fall-back for browsers that don't support rgba */
+  /*background: rgba(0, 0, 0, 0.5);*/
+}
+
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f6fefd;
+}
+a {
+  transition-duration: 1s;
+  text-decoration: none;
+  letter-spacing: 2px;
+
+  color: #f6fefd !important;
+
+  font-family: 'Roboto', sans-serif;
+}
+div {
+  color: #f6fefd;
+}
+a:hover {
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  text-decoration: none !important;
+  letter-spacing: .5em;
+}
+.homepageLink {
+  /*background: rgba(0, 0, 0, 0.73); /* Fall-back for browsers that don't support rgba */
+  /*background: rgba(0, 0, 0, 0.5);*/
+  height: 5%;
+  padding-top: 10px;
+
+  text-align: center;
+
+  background-image: url("../img/static-video.gif");
+  background-size: auto;
+}
+
+.static {
+  position: relative;
+  z-index: 230;
+  top: -100px;
+
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  user-select: none;
+
+  opacity: 0.05;
+
+  user-drag: none;
+}
+
+.images {
+  padding: 0;
+}
+
+
+/*ANIMATIONS*/
+
+@keyframes noise-1 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {left: -6px;opacity: .5; }
+  80% {opacity: .3;}
+  100% {left: 2px;opacity: .6; }
+}
+
+@keyframes noise-2 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {left: 6px;opacity: .5; }
+  80% {opacity: .3;}
+  100% {left: -2px;opacity: .6; }
+}
+
+@keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% {transform: scaleY(1);opacity: 1; }
+  4.3% {transform: scaleY(1.7);opacity: 1; }
+  43% {transform: scaleX(1.5);opacity: 1; }
+}
+
+@keyframes noise-3 {
+  0%,3%,5%,42%,44%,100% {transform: scaleY(1);opacity: 1; }
+  4.3% {transform: scaleY(4);opacity: 1; }
+  43% {transform: scaleX(10) rotate(60deg);opacity: 1; }
+}
+
+
+/*ANIMATIONS*/
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERIES*/
+
+/*-ms-overflow-style: -ms-autohiding-scrollbar;*/
+
+@media (max-width: 414px) {
+body {
+  overflow-x:hidden;
+
+  background: #000 !important;
+}
+.Footer {
+  font-size: 10px;
+}
+.error {
+  position: relative;
+
+  overflow: default;
+
+  width: 100%;
+  height: 10px;
+  margin: auto;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-left: 30%;
+
+  animation: noise 2s linear infinite;
+  text-align: center;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  line-height: 60px;
+}
+.error:after {
+display: none;
+}
+
+.error::before {
+display: none;
+}
+.background {
+  display: none;
+}
+.info {
+  position: absolute;
+  top: -67%;
+
+  animation: noise-3 1s linear infinite;
+  text-align: center;
+  letter-spacing: .25em;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+
+}
+.homepageLink {
+  font-size: 10px;
+}
+.Footer {
+  top: 30%;
+
+  background: rgba(0, 0, 0, 0.15);
+}
+
+}
+
+@media (max-width: 320px) {
+  .error{
+    padding-bottom: 5px;
+  }
+  .images {
+    padding-top: 20px;
+  }
+  .Footer {
+    top: 55%;
+  }
+}
+
+@media (max-width: 375px) {
+body {
+  overflow-x:hidden;
+}
+.homepageLink {
+  padding-bottom: 2%;
+}
+  .error{
+    padding-bottom: 5px;
+  }
+  .images {
+    padding-top: 20px;
+  }
+  .Footer {
+    top: 55%;
+  }
+}
+
+
+@media (max-width: 960px) {
+  body {
+    background: #000 !important;
+  }
+}
+
+/*@media (max-width: 1024px) {
+  body {
+    background: #000 !important;
+  }
+  .background {
+    display: none;
+  }
+  /*.page-intro {
+    padding-bottom: 90%;
+  }*/
+  /*.Footer {
+    top: 30%;
+    font-size: 30px;
+  }*/
+
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERIES*/
