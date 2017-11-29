@@ -265,7 +265,7 @@ display: none;
 }
 .info {
   position: absolute;
-  top: -67%;
+  top: -66%;
 
   animation: noise-3 1s linear infinite;
   text-align: center;
