@@ -361,12 +361,6 @@ a:hover {
     .homepageLink {
       font-size: 8px;
     }
-    .Footer {
-      position: fixed;
-      top: 50%;
-
-      background: rgba(0, 0, 0, 0.15);
-    }
 
     }
 
@@ -437,12 +431,6 @@ a:hover {
     }
     .homepageLink {
       font-size: 10px;
-    }
-    .Footer {
-      position: fixed;
-      top: 50%;
-
-      background: rgba(0, 0, 0, 0.15);
     }
 
     }
@@ -553,14 +541,6 @@ a:hover {
   .homepageLink {
     font-size: 20px;
   }
-  .Footer {
-    position: fixed;
-    top: 70%;
-
-    background: rgba(0, 0, 0, 0.15);
-
-    font-size: 20px;
-  }
 }
 
 
@@ -616,12 +596,6 @@ a:hover {
   }
   .homepageLink {
     font-size: 18px;
-  }
-  .Footer {
-    position: fixed;
-    top: 70%;
-
-    background: rgba(0, 0, 0, 0.15);
   }
 }
 
