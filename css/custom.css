@@ -104,7 +104,7 @@ body {
 }
 
 .Footer {
-  position: fixed !important;
+  position: fixed;
   top: 50%;
 
   padding: 1em;
@@ -278,12 +278,6 @@ a:hover {
     .images {
       padding-top: 20px;
     }
-    .Footer {
-      position: fixed;
-      top: 55%;
-
-      font-size: 8px;
-    }
 }
 
 /* Landscape */
@@ -347,15 +341,6 @@ a:hover {
       display: none;
     }
     .info {
-      /*position: absolute;
-      top: -66%;
-      margin-bottom: 10px;
-      animation: noise-3 1s linear infinite;
-      text-align: center;
-      letter-spacing: .25em;
-
-      font-family: 'Roboto', sans-serif;
-      font-size: 15px;*/
       display: none;
     }
     .homepageLink {
