@@ -1,0 +1,525 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins...............Useful mixins.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * BASE
+ * Headings.............H1–H6 styles.
+ *
+ * OBJECTS
+ * Wrappers.............Wrapping and constraining elements.
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ *
+ * TRUMPS
+ * Text.................Text helpers.
+ */
+
+
+ /*------------------------------------*\
+   FONT
+ \*------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+/*------------------------------------*\
+  Global Styles
+\*------------------------------------*/
+
+html {
+  height: 100%;
+
+  color: #f6fefd;
+  background: #000;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+
+li {
+  list-style: none;
+}
+
+a {
+  transition-duration: 1s;
+  text-decoration: none;
+
+  color: #f6fefd;
+}
+a:hover {
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  text-decoration: none;
+  letter-spacing: .5em;
+}
+
+
+/*------------------------------------*\
+  INTRO
+\*------------------------------------*/
+.alternate-intro {
+  display: none;
+}
+
+.intro {
+  background-size: cover;
+}
+.error {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -60px;
+
+  overflow: default;
+
+  width: 100px;
+  height: 60px;
+  margin: auto;
+
+  animation: noise 2s linear infinite;
+  text-align: center;
+
+  font-size: 100px;
+  font-style: italic;
+  line-height: 60px;
+}
+.error::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+  height: 60px;
+  margin: auto;
+
+  content: 'GÜNZ';
+  animation: noise-1 .2s linear infinite;
+  text-align: center;
+
+  opacity: 0;
+  color: blue;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 100px;
+  font-style: italic;
+  line-height: 60px;
+}
+.error:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100px;
+  height: 60px;
+  margin: auto;
+
+  content: 'GÜNZ';
+  animation: noise-2 .2s linear infinite;
+
+  opacity: 0;
+  color: red;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 100px;
+  font-style: italic;
+}
+.info {
+  position: absolute;
+  top: 140px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 200px;
+  height: 60px;
+  margin: auto;
+
+  animation: noise-3 1s linear infinite;
+  text-align: center;
+  text-align: center;
+  letter-spacing: 5px;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 35px;
+  font-style: italic;
+  line-height: 60px;
+}
+
+
+/*------------------------------------*\
+  ANIMATIONS
+\*------------------------------------*/
+
+@keyframes noise-1 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {left: -6px;opacity: .5; }
+  80% {opacity: .3;}
+  100% {left: 2px;opacity: .6; }
+}
+
+@keyframes noise-2 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {left: 6px;opacity: .5; }
+  80% {opacity: .3;}
+  100% {left: -2px;opacity: .6; }
+}
+
+@keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% {transform: scaleY(1);opacity: 1; }
+  4.3% {transform: scaleY(1.7);opacity: 1; }
+  43% {transform: scaleX(1.5);opacity: 1; }
+}
+
+@keyframes noise-3 {
+  0%,3%,5%,42%,44%,100% {transform: scaleY(1);opacity: 1; }
+  4.3% {transform: scaleY(4);opacity: 1; }
+  43% {transform: scaleX(10) rotate(60deg);opacity: 1; }
+}
+
+/*------------------------------------*\
+  SIDEBAR
+\*------------------------------------*/
+
+.sideBar {
+  position: fixed;
+  top: 50%;
+
+  padding: 1em;
+
+  background-image: url("../img/static-video.gif");
+  background-size: auto;
+
+  line-height: 1.5em;
+  /*background: rgba(0, 0, 0, 0.73); /* Fall-back for browsers that don't support rgba */
+  /*background: rgba(0, 0, 0, 0.5);*/
+}
+
+/*------------------------------------*\
+  SITE CREDIT
+\*------------------------------------*/
+
+
+.homepageLink {
+  padding: 1em;
+  /*background: rgba(0, 0, 0, 0.73); /* Fall-back for browsers that don't support rgba */
+  /*background: rgba(0, 0, 0, 0.5);*/
+
+  text-align: center;
+
+  background-image: url("../img/static-video.gif");
+  background-size: auto;
+}
+
+/*------------------------------------*\
+  MEDIA QUERIES
+\*------------------------------------*/
+
+@media screen and (max-width: 320px) {
+
+  .intro {
+    position: absolute;
+    top: 25%; bottom: 0; left: 0; right: 0;
+    transform: translateY(-50%);
+  }
+  .error {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 60px;
+    margin: auto;
+    line-height: 60px;
+
+    animation: noise 2s linear infinite;
+    text-align: center;
+
+    font-size: 50px;
+    font-style: italic;
+  }
+  .error::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 150px;
+    height: 60px;
+    margin: auto;
+
+    content: 'GÜNZ';
+    animation: noise-1 .2s linear infinite;
+    text-align: center;
+
+    opacity: 0;
+    color: blue;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-style: italic;
+    line-height: 60px;
+  }
+  .error::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100px;
+    height: 60px;
+    margin: auto;
+
+    content: 'GÜNZ';
+    animation: noise-2 .2s linear infinite;
+
+    opacity: 0;
+    color: red;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-style: italic;
+  }
+  .info {
+    position: absolute;
+    top: 140px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 200px;
+    height: 60px;
+    margin: auto;
+
+    animation: noise-3 1s linear infinite;
+    text-align: center;
+    text-align: center;
+    letter-spacing: 5px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 60px;
+  }
+  html {
+    overflow-x: hidden;
+  }
+  .images {
+    padding-top: 100%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+
+  .intro {
+    position: absolute;
+    top: 25%; bottom: 0; left: 0; right: 0;
+    transform: translateY(-50%);
+  }
+  .error {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 60px;
+    margin: auto;
+    line-height: 60px;
+
+    animation: noise 2s linear infinite;
+    text-align: center;
+
+    font-size: 50px;
+    font-style: italic;
+  }
+  .error::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 150px;
+    height: 60px;
+    margin: auto;
+
+    content: 'GÜNZ';
+    animation: noise-1 .2s linear infinite;
+    text-align: center;
+
+    opacity: 0;
+    color: blue;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-style: italic;
+    line-height: 60px;
+  }
+  .error::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100px;
+    height: 60px;
+    margin: auto;
+
+    content: 'GÜNZ';
+    animation: noise-2 .2s linear infinite;
+
+    opacity: 0;
+    color: red;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-style: italic;
+  }
+  .info {
+    position: absolute;
+    top: 140px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 200px;
+    height: 60px;
+    margin: auto;
+
+    animation: noise-3 1s linear infinite;
+    text-align: center;
+    text-align: center;
+    letter-spacing: 5px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 60px;
+  }
+  html {
+    overflow-x: hidden;
+  }
+  .images {
+    padding-top: 90%;
+  }
+}
+
+
+@media screen and (max-width: 375px) {
+
+  .intro {
+    position: absolute;
+    top: 25%; bottom: 0; left: 0; right: 0;
+    transform: translateY(-50%);
+  }
+  .error {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 60px;
+    margin: auto;
+    line-height: 60px;
+
+    animation: noise 2s linear infinite;
+    text-align: center;
+
+    font-size: 50px;
+    font-style: italic;
+  }
+  .error::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 150px;
+    height: 60px;
+    margin: auto;
+
+    content: 'GÜNZ';
+    animation: noise-1 .2s linear infinite;
+    text-align: center;
+
+    opacity: 0;
+    color: blue;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-style: italic;
+    line-height: 60px;
+  }
+  .error::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100px;
+    height: 60px;
+    margin: auto;
+
+    content: 'GÜNZ';
+    animation: noise-2 .2s linear infinite;
+
+    opacity: 0;
+    color: red;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-style: italic;
+  }
+  .info {
+    position: absolute;
+    top: 140px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 200px;
+    height: 60px;
+    margin: auto;
+
+    animation: noise-3 1s linear infinite;
+    text-align: center;
+    text-align: center;
+    letter-spacing: 5px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 60px;
+  }
+  html {
+    overflow-x: hidden;
+  }
+  .images {
+    padding-top: 100%;
+  }
+}
